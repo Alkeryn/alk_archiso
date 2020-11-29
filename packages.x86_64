@@ -1,5 +1,10 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+
+# zfs
+archzfs-linux
+
+# default
 alsa-utils
 amd-ucode
 arch-install-scripts
