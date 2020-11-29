@@ -1,6 +1,13 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+# tools
+
+base-devel
+git
+chntpw
+neovim
+
 # zfs
 archzfs-linux
 
