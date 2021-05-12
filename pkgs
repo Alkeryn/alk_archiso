@@ -1,0 +1,9 @@
+# tools
+
+base-devel
+git
+chntpw
+neovim
+
+# zfs
+archzfs-linux

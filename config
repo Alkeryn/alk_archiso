@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+config=releng
+
+rm -rf $config
+cp -r "${isopath:-/usr/share/archiso/configs/$config}" ./
+
+cd $config
+
+cat ../pkgs >> packages.x86_64
+
+cat <<'EOF' >> pacman.conf
+[archzfs]
+Server = http://archzfs.com/$repo/$arch
+EOF
