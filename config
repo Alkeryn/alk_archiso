@@ -13,3 +13,16 @@ cat <<'EOF' >> pacman.conf
 [archzfs]
 Server = http://archzfs.com/$repo/$arch
 EOF
+
+# ssh setup
+
+mkdir airootfs/root/.ssh
+cat ~/.ssh/keys/archiso.pub >> airootfs/root/.ssh/authorized_keys
+
+sed -i '$d' profiledef.sh
+cat <<EOF >> profiledef.sh
+  ["/root/.ssh"]="0:0:0700"
+  ["/root/.ssh/authorized_keys"]="0:0:0600"
+)
+EOF
+
